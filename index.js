@@ -1,5 +1,14 @@
 function isPalindrome(word) {
   // Write your algorithm here
+  const len = word.length; // get the length of the string
+  for (let i = 0; i < len / 2; i++) {
+    // iterate over the string from both ends, comparing the characters
+    if (word[i] !== word[len - 1 - i]) {
+      // if any characters don't match, the string is not a palindrome
+      return false;
+    }
+  }
+  return true;
 }
 
 /* 
